@@ -1,0 +1,41 @@
+{
+  "name": "pkg-packager-dmg",
+  "version": "0.0.0",
+  "description": "A pkg-packager builder for Apple Disk Images (DMG).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo TODO"
+  },
+  "keywords": [
+    "pkg",
+    "packager",
+    "builder",
+    "dmg",
+    "apple",
+    "disk",
+    "image"
+  ],
+  "author": "Bret Comnes <bcomnes@gmail.com> (https://bret.io)",
+  "license": "MIT",
+  "optionalDependencies": {
+    "appdmg": "^0.6.0"
+  },
+  "dependencies": {
+    "appdmg": "^0.6.0",
+    "batch": "^0.6.1",
+    "bplist-creator": "0.0.8",
+    "bplist-parser": "^0.2.0",
+    "mirror-folder": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/little-core-labs/pkg-packager-dmg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/little-core-labs/pkg-packager-dmg/issues"
+  },
+  "homepage": "https://github.com/little-core-labs/pkg-packager-dmg#readme"
+}
