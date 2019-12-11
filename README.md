@@ -1,12 +1,12 @@
-pkg-packager-dmg
-================
+pkg-packager-appdmg
+===================
 
-> A [pkg-packager][pkg-packager] builder for Apple Disk Images (DMG).
+> A [pkg-packager][pkg-packager] to build macOS bundles (.app) and Apple Disk Images (DMG).
 
 ## Installation
 
 ```sh
-$ npm install pkg-packager-dmg
+$ npm install pkg-packager-appdmg
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ $ npm install pkg-packager-dmg
 
 ```js
 $ echo 'console.log("hello world")' > hello.js
-$ pkg-package --type dmg hello.js ## assumes `macos` as host
+$ pkg-package --type appdmg hello.js ## assumes `macos` as host
 $ open ./build/x64/macos/hello.dmg
 ```
 

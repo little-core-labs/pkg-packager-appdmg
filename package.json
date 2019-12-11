@@ -1,7 +1,7 @@
 {
-  "name": "pkg-packager-dmg",
+  "name": "pkg-packager-appdmg",
   "version": "0.0.0",
-  "description": "A pkg-packager builder for Apple Disk Images (DMG).",
+  "description": "A pkg-packager builder to build macOS bundles (.app) and Apple Disk Images (DMG).",
   "main": "index.js",
   "scripts": {
     "test": "echo TODO"
@@ -10,6 +10,7 @@
     "pkg",
     "packager",
     "builder",
+    "app",
     "dmg",
     "apple",
     "disk",
@@ -32,10 +33,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/little-core-labs/pkg-packager-dmg.git"
+    "url": "git+https://github.com/little-core-labs/pkg-packager-appdmg.git"
   },
   "bugs": {
-    "url": "https://github.com/little-core-labs/pkg-packager-dmg/issues"
+    "url": "https://github.com/little-core-labs/pkg-packager-appdmg/issues"
   },
-  "homepage": "https://github.com/little-core-labs/pkg-packager-dmg#readme"
+  "homepage": "https://github.com/little-core-labs/pkg-packager-appdmg#readme"
 }
