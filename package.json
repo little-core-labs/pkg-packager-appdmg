@@ -1,6 +1,6 @@
 {
   "name": "pkg-packager-appdmg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A pkg-packager builder to build macOS bundles (.app) and Apple Disk Images (DMG).",
   "main": "index.js",
   "scripts": {
