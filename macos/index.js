@@ -7,21 +7,21 @@ const fs = require('fs')
 const bplist = require('bplist-parser')
 const bplistCtor = require('bplist-creator')
 
+const TEMPLATE_APPLICATION_NAME = 'Application'
+
 function dmg (target, opts) {
   let appdmg = null
 
   const stageDirectory = path.join(opts.output, 'stage')
   const appBundleName = `${opts.productName}.app`
-  const templateBinName = 'app-name'
+  const templateBinName = TEMPLATE_APPLICATION_NAME
   const templateBundleName = `${templateBinName}.app`
   const templateBundlePath = path.resolve(stageDirectory, templateBundleName)
   const appBundlePath = path.resolve(stageDirectory, appBundleName)
   const templateExePath = path.resolve(stageDirectory, appBundleName, `Contents/MacOS/${templateBinName}`)
   const targetExePath = path.resolve(stageDirectory, appBundleName, `Contents/MacOS/${opts.productName}`)
 
-  const templateDirectory = path.resolve(
-    __dirname, '..', '..', '..', '..',
-    'templates', 'macos', 'dmg')
+  const templateDirectory = path.resolve(__dirname, '..', 'template')
 
   // `Builder` interface
   return {
@@ -43,10 +43,10 @@ function dmg (target, opts) {
     steps.push((next) => mkdirp(stageDirectory, next))
     steps.push((next) => mirror(templateDirectory, stageDirectory, next))
 
-    // rename app-name.app
+    // rename Application.app
     steps.push(next => fs.rename(templateBundlePath, appBundlePath, next))
 
-    // rename MacOS app-name exe
+    // rename MacOS Application exe
     steps.push(next => fs.rename(templateExePath, targetExePath, next))
 
     // set up run command in Resources/script
